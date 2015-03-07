@@ -65,11 +65,15 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
     private SignInButton mPlusSignInButton;
     private View mSignOutButtons;
     private View mLoginFormView;
+    private Button estimoteButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        estimoteButton = (Button) findViewById(R.id.estimote_button);
 
         // Find the Google+ sign in button.
         mPlusSignInButton = (SignInButton) findViewById(R.id.plus_sign_in_button);
@@ -120,6 +124,11 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
 
     private void populateAutoComplete() {
         getLoaderManager().initLoader(0, null, this);
+    }
+
+    public void startEstimoteActivity(View v) {
+        Intent i = new Intent(getApplicationContext(), AllDemosActivity.class);
+        startActivity(i);
     }
 
 
