@@ -7,6 +7,7 @@ import android.annotation.TargetApi;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.ContentResolver;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
@@ -64,11 +65,23 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
     private SignInButton mPlusSignInButton;
     private View mSignOutButtons;
     private View mLoginFormView;
+    private Button estimoteButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+/*
+        estimoteButton = (Button) findViewById(R.id.estimoteActivityButton);
+        estimoteButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), estimoteActivity.class);
+                startActivity(i);
+            }
+        });
+*/
+
 
         // Find the Google+ sign in button.
         mPlusSignInButton = (SignInButton) findViewById(R.id.plus_sign_in_button);
@@ -116,6 +129,12 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
         mEmailLoginFormView = findViewById(R.id.email_login_form);
         mSignOutButtons = findViewById(R.id.plus_sign_out_buttons);
     }
+
+    public void startEstimoteActivity(View v){
+        Intent i = new Intent(getApplicationContext(), estimoteActivity.class);
+        startActivity(i);
+    }
+
 
     private void populateAutoComplete() {
         getLoaderManager().initLoader(0, null, this);
