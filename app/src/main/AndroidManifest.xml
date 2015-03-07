@@ -37,8 +37,7 @@
         <activity android:name=".estimoteActivity"
             android:label="SAE_UCSD"
             android:theme="@style/AppTheme">
-
-            </activity>
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
