@@ -38,13 +38,7 @@
                     android:layout_height="wrap_content"
                     android:text="News Feed"
                     android:onClick="goToNewsFeed"/>
-                <Button
-                    android:id="@+id/estimote_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="estimote"
-                    android:onClick="startEstimoteActivity"
-                    />
+
 
             </LinearLayout>
 

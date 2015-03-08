@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -179,7 +180,8 @@ public class NewsFeedActivity extends ActionBarActivity {
                 fragment = new PagesFragment();
                 break;
             case 5:
-                fragment = new WhatsHotFragment();
+                Intent estimote = new Intent(this, AllDemosActivity.class);
+                startActivity(estimote);
                 break;
 
             default:
