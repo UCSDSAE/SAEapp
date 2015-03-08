@@ -1,8 +1,6 @@
 package com.example.tylerpollak.sae_ucsd;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.util.Log;
